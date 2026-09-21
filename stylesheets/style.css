@@ -18,7 +18,8 @@ footer links grey: #454245
 }
 
 body {
-    background-color: purple;
+    background-color: var(--bg-purple); /* Apartado 1 */
+    /* También hubiera valido : background-color: #540b51 */
 
 }
 
@@ -35,6 +36,7 @@ button {
     text-transform: uppercase;
     height: 45px;
     border-radius: 4px;
+    font-weight: 700; /* Apartado 6*/
 }
 
 .navbar ul {
@@ -43,11 +45,15 @@ button {
 
 .navbar__logo {
     /* Apartado 3 */
+    max-width: 250px;
 }
 
 
 .navbar {
-    /* Apartado 6 */
+    /* Apartado 7 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar__icons {
@@ -71,7 +77,7 @@ button {
 .hero__title {
     color: white;
     text-align: center;
-    font-size: 16px;
+    font-size: 2.5rem; /* Apartado 4. Cualquier valor aproximado mientras se usa rem */
     margin-top: 3rem;
     font-weight: 700;
 }
@@ -142,7 +148,7 @@ button {
 }
 
 .tryit {
-    color: pink;
+    color: var(--bg-purple); /* Apartado 5: Cualquier valor de suficiente contraste hubiera valido. */
 }
 
 /* Teams */
@@ -209,7 +215,8 @@ footer {
 }
 
 .social {
-    display: block;
+    display: flex;
+    justify-content: space-between; /* Apartado 8. También vale otro valores para justify-content porque los criterios de evaluación así lo contemplan. Pero esta manera de distribuir los elementos es la más parecida al diseño esperado en el vídeo */
 }
 
 footer small {
@@ -234,6 +241,8 @@ footer small {
     .hero {
         margin-bottom: 2rem;
         overflow: hidden;
+        display: flex;
+        align-items: center; /* Ejercicio de las media queries (o consulta de medios)*/
     }
 
     .hero__title,
